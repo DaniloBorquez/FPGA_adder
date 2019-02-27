@@ -1,0 +1,18 @@
+# Output products list for <sumatorIP>
+_xmsgs/pn_parser.xmsgs
+demo_tb/tb_sumatorIP.vhd
+sumatorIP/cmodel/floating_point_v6_1_bitacc_cmodel_lin.zip
+sumatorIP/cmodel/floating_point_v6_1_bitacc_cmodel_lin64.zip
+sumatorIP/cmodel/floating_point_v6_1_bitacc_cmodel_nt.zip
+sumatorIP/cmodel/floating_point_v6_1_bitacc_cmodel_nt64.zip
+sumatorIP.asy
+sumatorIP.gise
+sumatorIP.ngc
+sumatorIP.sym
+sumatorIP.vhd
+sumatorIP.vho
+sumatorIP.xco
+sumatorIP.xise
+sumatorIP_flist.txt
+sumatorIP_readme.txt
+sumatorIP_xmdf.tcl

@@ -1,0 +1,223 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'sumator'
+
+Design Information
+------------------
+Command Line   : map -filter
+/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -p
+xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication
+off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o
+sumator_map.ncd sumator.ngd sumator.pcf 
+Target Device  : xc6slx16
+Target Package : ftg256
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Tue Feb  5 15:33:27 2019
+
+Interim Summary
+---------------
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,333 out of  18,224    7%
+    Number used as Flip Flops:               1,333
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        973 out of   9,112   10%
+    Number used as logic:                      876 out of   9,112    9%
+      Number using O6 output only:             615
+      Number using O5 output only:               4
+      Number using O5 and O6:                  257
+      Number used as ROM:                        0
+    Number used as Memory:                      95 out of   2,176    4%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            95
+        Number using O6 output only:            10
+        Number using O5 output only:             0
+        Number using O5 and O6:                 85
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of MUXCYs used:                       296 out of   4,556    6%
+  Number of LUT Flip Flop pairs used:        1,276
+    Number with an unused Flip Flop:           179 out of   1,276   14%
+    Number with an unused LUT:                 303 out of   1,276   23%
+    Number of fully used LUT-FF pairs:         794 out of   1,276   62%
+    Number of unique control sets:               8
+    Number of slice register sites lost
+      to control set restrictions:               7 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       199 out of     186  106% (OVERMAPPED)
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Mapping completed.
+See MAP report file "sumator_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Pack:2309 - Too many bonded comps of type "IOB" found to fit this device.
+ERROR:Map:237 - The design is too large to fit the device.  Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device. Note that the number of slices reported may not be reflected accurately as
+   their packing might not have been completed.
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network sum/blk00000001/sig000004ef has no load.
+INFO:LIT:395 - The above info message is repeated 4 more times for the following
+   (max. 5 shown):
+   sum/blk00000001/sig0000037b,
+   sum/blk00000001/sig0000037a,
+   sum/blk00000001/sig00000379,
+   sum/blk00000001/sig00000378
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  37 block(s) removed
+   2 block(s) optimized away
+  26 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "sum/blk00000001/blk000005ea" (XOR) removed.
+ The signal "sum/blk00000001/sig00000a7b" is loadless and has been removed.
+  Loadless block "sum/blk00000001/blk000005ec" (MUX) removed.
+   The signal "sum/blk00000001/sig00000a7c" is loadless and has been removed.
+    Loadless block "sum/blk00000001/blk000005ee" (MUX) removed.
+     The signal "sum/blk00000001/sig00000a7d" is loadless and has been removed.
+      Loadless block "sum/blk00000001/blk000005f0" (MUX) removed.
+       The signal "sum/blk00000001/sig00000a7e" is loadless and has been removed.
+        Loadless block "sum/blk00000001/blk000005f2" (MUX) removed.
+         The signal "sum/blk00000001/sig00000a7f" is loadless and has been removed.
+          Loadless block "sum/blk00000001/blk000005f4" (MUX) removed.
+           The signal "sum/blk00000001/sig00000a80" is loadless and has been removed.
+            Loadless block "sum/blk00000001/blk000005f6" (MUX) removed.
+             The signal "sum/blk00000001/sig00000a81" is loadless and has been removed.
+              Loadless block "sum/blk00000001/blk000005f8" (MUX) removed.
+               The signal "sum/blk00000001/sig00000a82" is loadless and has been removed.
+                Loadless block "sum/blk00000001/blk000005fa" (MUX) removed.
+                 The signal "sum/blk00000001/sig00000a83" is loadless and has been removed.
+                  Loadless block "sum/blk00000001/blk000005fc" (MUX) removed.
+                   The signal "sum/blk00000001/sig00000a84" is loadless and has been removed.
+                    Loadless block "sum/blk00000001/blk000005fe" (MUX) removed.
+                     The signal "sum/blk00000001/sig000009bc" is loadless and has been removed.
+                      Loadless block "sum/blk00000001/blk00000597" (FF) removed.
+                       The signal "sum/blk00000001/sig00000a45" is loadless and has been removed.
+                        Loadless block "sum/blk00000001/blk00000599" (MUX) removed.
+Loadless block "sum/blk00000001/blk000005eb" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005ed" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005ef" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005f1" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005f3" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005f5" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005f7" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005f9" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005fb" (XOR) removed.
+Loadless block "sum/blk00000001/blk000005fd" (XOR) removed.
+The signal "sum/blk00000001/sig000003e7" is sourceless and has been removed.
+ Sourceless block "sum/blk00000001/blk00000167" (FF) removed.
+  The signal "sum/blk00000001/sig00000402" is sourceless and has been removed.
+   Sourceless block "sum/blk00000001/blk00000770" (ROM) removed.
+    The signal "sum/blk00000001/sig000003d7" is sourceless and has been removed.
+     Sourceless block "sum/blk00000001/blk000001f4" (FF) removed.
+      The signal "sum/blk00000001/sig0000037a" is sourceless and has been removed.
+The signal "sum/blk00000001/sig000003ea" is sourceless and has been removed.
+ Sourceless block "sum/blk00000001/blk000001cd" (FF) removed.
+  The signal "sum/blk00000001/sig000004ef" is sourceless and has been removed.
+The signal "sum/blk00000001/sig000003d8" is sourceless and has been removed.
+ Sourceless block "sum/blk00000001/blk000001f3" (FF) removed.
+  The signal "sum/blk00000001/sig0000037b" is sourceless and has been removed.
+The signal "sum/blk00000001/sig000003d6" is sourceless and has been removed.
+ Sourceless block "sum/blk00000001/blk000001f5" (FF) removed.
+  The signal "sum/blk00000001/sig00000379" is sourceless and has been removed.
+The signal "sum/blk00000001/sig000003d5" is sourceless and has been removed.
+ Sourceless block "sum/blk00000001/blk000001f6" (FF) removed.
+  The signal "sum/blk00000001/sig00000378" is sourceless and has been removed.
+The signal "sum/blk00000001/sig00000440" is sourceless and has been removed.
+ Sourceless block "sum/blk00000001/blk0000078c" (ROM) removed.
+The signal "sum/blk00000001/sig00000ba3" is sourceless and has been removed.
+ Sourceless block "sum/blk00000001/blk00000b0f" (FF) removed.
+Unused block "sum/blk00000001/blk0000076e" (ROM) removed.
+Unused block "sum/blk00000001/blk0000076f" (ROM) removed.
+Unused block "sum/blk00000001/blk00000771" (ROM) removed.
+Unused block "sum/blk00000001/blk0000077b" (ROM) removed.
+Unused block "sum/blk00000001/blk00000b0e" (SRLC16E) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+VCC 		sum/blk00000001/blk00000002
+GND 		sum/blk00000001/blk00000003
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.

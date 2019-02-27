@@ -1,0 +1,965 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: fpadder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fpadder.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fpadder"
+Output Format                      : NGC
+Target Device                      : xc6slx75-2-fgg676
+
+---- Source Options
+Top Module Name                    : fpadder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Mux.vhd" into library work
+Parsing entity <Mux>.
+Parsing architecture <Behavioral> of entity <mux>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Zero.vhd" into library work
+Parsing entity <Zero>.
+Parsing architecture <Behavioral> of entity <zero>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/shift_left.vhd" into library work
+Parsing entity <shift_left>.
+Parsing architecture <Behavioral> of entity <shift_left>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Shift.vhd" into library work
+Parsing entity <Shift>.
+Parsing architecture <Behavioral> of entity <shift>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/round.vhd" into library work
+Parsing entity <round>.
+Parsing architecture <Behavioral> of entity <round>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Comp_Exp.vhd" into library work
+Parsing entity <Comp_Exp>.
+Parsing architecture <Behavioral> of entity <comp_exp>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Comp.vhd" into library work
+Parsing entity <Comp>.
+Parsing architecture <Behavioral> of entity <comp>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/CLA.vhd" into library work
+Parsing entity <CLA>.
+Parsing architecture <Behavioral> of entity <cla>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/vector.vhd" into library work
+Parsing entity <vector>.
+Parsing architecture <Behavioral> of entity <vector>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/signout.vhd" into library work
+Parsing entity <signout>.
+Parsing architecture <Behavioral> of entity <signout>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Select.vhd" into library work
+Parsing entity <selector>.
+Parsing architecture <Behavioral> of entity <selector>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/n_subn.vhd" into library work
+Parsing entity <n_subn>.
+Parsing architecture <Behavioral> of entity <n_subn>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/n_normal.vhd" into library work
+Parsing entity <n_normal>.
+Parsing architecture <Behavioral> of entity <n_normal>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/norm.vhd" into library work
+Parsing entity <norm>.
+Parsing architecture <Behavioral> of entity <norm>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/mux_ns.vhd" into library work
+Parsing entity <mux_ns>.
+Parsing architecture <Behavioral> of entity <mux_ns>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/mux_adder.vhd" into library work
+Parsing entity <mux_adder>.
+Parsing architecture <Behavioral> of entity <mux_adder>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/demux.vhd" into library work
+Parsing entity <demux>.
+Parsing architecture <Behavioral> of entity <demux>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/block_norm.vhd" into library work
+Parsing entity <block_norm>.
+Parsing architecture <Behavioral> of entity <block_norm>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/adder.vhd" into library work
+Parsing entity <adder>.
+Parsing architecture <Behavioral> of entity <adder>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" into library work
+Parsing entity <n_case>.
+Parsing architecture <Behavioral> of entity <n_case>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/preadder.vhd" into library work
+Parsing entity <preadder>.
+Parsing architecture <Behavioral> of entity <preadder>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/norm_vector.vhd" into library work
+Parsing entity <norm_vector>.
+Parsing architecture <Behavioral> of entity <norm_vector>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/mux_fpadder.vhd" into library work
+Parsing entity <mux_fpadder>.
+Parsing architecture <Behavioral> of entity <mux_fpadder>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/block_adder.vhd" into library work
+Parsing entity <block_adder>.
+Parsing architecture <Behavioral> of entity <block_adder>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/fpadder.vhd" into library work
+Parsing entity <fpadder>.
+Parsing architecture <Behavioral> of entity <fpadder>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <fpadder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <preadder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <n_normal> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Comp_Exp> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Shift> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux_ns> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <demux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux_adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <norm> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Zero> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shift_left> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Comp> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <n_subn> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <selector> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <block_adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <signout> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CLA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <norm_vector> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <block_norm> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <round> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <vector> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux_fpadder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <n_case> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 84: eb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 85: mb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 88: ea should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 89: ma should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 94: eb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 95: mb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 98: ea should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 99: ma should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 104: ea should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/dborquez/XilinxProjects/RK4/specialCases.vhd" Line 105: ma should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fpadder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/fpadder.vhd".
+    Summary:
+	no macro.
+Unit <fpadder> synthesized.
+
+Synthesizing Unit <preadder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/preadder.vhd".
+    Summary:
+	no macro.
+Unit <preadder> synthesized.
+
+Synthesizing Unit <n_normal>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/n_normal.vhd".
+    Summary:
+	no macro.
+Unit <n_normal> synthesized.
+
+Synthesizing Unit <Comp_Exp>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Comp_Exp.vhd".
+    Found 11-bit adder for signal <X_8_o_EA[10]_mux_11_OUT> created at line 69.
+    Found 11-bit subtractor for signal <GND_8_o_GND_8_o_sub_13_OUT<10:0>> created at line 68.
+    Found 11-bit subtractor for signal <GND_8_o_GND_8_o_sub_15_OUT<10:0>> created at line 67.
+    Found 11-bit comparator greater for signal <EB[10]_EA[10]_LessThan_5_o> created at line 55
+    Found 11-bit comparator greater for signal <EA[10]_EB[10]_LessThan_6_o> created at line 56
+    Found 57-bit comparator lessequal for signal <n0009> created at line 57
+    Found 11-bit comparator lessequal for signal <n0026> created at line 73
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <Comp_Exp> synthesized.
+
+Synthesizing Unit <Shift>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Shift.vhd".
+    Summary:
+	no macro.
+Unit <Shift> synthesized.
+
+Synthesizing Unit <Mux>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Mux.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux> synthesized.
+
+Synthesizing Unit <mux_ns>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/mux_ns.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <mux_ns> synthesized.
+
+Synthesizing Unit <demux>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/demux.vhd".
+    Summary:
+	no macro.
+Unit <demux> synthesized.
+
+Synthesizing Unit <mux_adder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/mux_adder.vhd".
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <mux_adder> synthesized.
+
+Synthesizing Unit <norm>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/norm.vhd".
+    Summary:
+	no macro.
+Unit <norm> synthesized.
+
+Synthesizing Unit <Zero>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Zero.vhd".
+    Summary:
+	inferred  56 Multiplexer(s).
+Unit <Zero> synthesized.
+
+Synthesizing Unit <shift_left>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/shift_left.vhd".
+    Summary:
+	no macro.
+Unit <shift_left> synthesized.
+
+Synthesizing Unit <Comp>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Comp.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <Comp> synthesized.
+
+Synthesizing Unit <n_subn>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/n_subn.vhd".
+WARNING:Xst:647 - Input <numberB<67:57>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 57-bit comparator lessequal for signal <C_INV_76_o> created at line 50
+    Summary:
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <n_subn> synthesized.
+
+Synthesizing Unit <selector>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Select.vhd".
+    Found 11-bit comparator greater for signal <GND_145_o_EA[10]_LessThan_17_o> created at line 83
+    Found 11-bit comparator greater for signal <GND_145_o_EB[10]_LessThan_18_o> created at line 83
+    Summary:
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <selector> synthesized.
+
+Synthesizing Unit <block_adder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/block_adder.vhd".
+    Found 57-bit adder for signal <S_aux[56]_GND_146_o_add_1_OUT> created at line 84.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <block_adder> synthesized.
+
+Synthesizing Unit <signout>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/signout.vhd".
+    Summary:
+	inferred   7 Multiplexer(s).
+Unit <signout> synthesized.
+
+Synthesizing Unit <adder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/adder.vhd".
+    Summary:
+Unit <adder> synthesized.
+
+Synthesizing Unit <CLA>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/CLA.vhd".
+    Summary:
+Unit <CLA> synthesized.
+
+Synthesizing Unit <norm_vector>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/norm_vector.vhd".
+    Summary:
+	no macro.
+Unit <norm_vector> synthesized.
+
+Synthesizing Unit <block_norm>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/block_norm.vhd".
+    Found 11-bit adder for signal <GND_151_o_GND_151_o_add_2_OUT> created at line 82.
+    Found 11-bit subtractor for signal <n0063> created at line 0.
+WARNING:Xst:737 - Found 1-bit latch for signal <Shift<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Shift<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Shift<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Shift<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Shift<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Shift<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 11-bit comparator greater for signal <GND_151_o_ES[10]_LessThan_1_o> created at line 80
+    Found 11-bit comparator greater for signal <ES[10]_GND_151_o_LessThan_4_o> created at line 83
+    Found 11-bit comparator equal for signal <ES[10]_GND_151_o_equal_5_o> created at line 86
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  17 Latch(s).
+	inferred   3 Comparator(s).
+	inferred  23 Multiplexer(s).
+Unit <block_norm> synthesized.
+
+Synthesizing Unit <round>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/round.vhd".
+WARNING:Xst:647 - Input <Min<4:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 52-bit adder for signal <Min[56]_GND_152_o_add_1_OUT> created at line 43.
+    Found 4-bit comparator lessequal for signal <n0000> created at line 42
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <round> synthesized.
+
+Synthesizing Unit <vector>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/vector.vhd".
+    Summary:
+	no macro.
+Unit <vector> synthesized.
+
+Synthesizing Unit <mux_fpadder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/mux_fpadder.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_fpadder> synthesized.
+
+Synthesizing Unit <n_case>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/specialCases.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <SS>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ES<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<51>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<50>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<49>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<48>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<47>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<46>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<45>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<44>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<43>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<42>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<41>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<40>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<39>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<38>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<37>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<36>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<35>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<34>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<33>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<32>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MS<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 11-bit comparator greater for signal <GND_172_o_EA[10]_LessThan_9_o> created at line 66
+    Found 11-bit comparator greater for signal <EA[10]_PWR_30_o_LessThan_10_o> created at line 66
+    Found 52-bit comparator greater for signal <GND_172_o_MA[51]_LessThan_15_o> created at line 68
+    Found 11-bit comparator greater for signal <GND_172_o_EB[10]_LessThan_25_o> created at line 73
+    Found 11-bit comparator greater for signal <EB[10]_PWR_30_o_LessThan_26_o> created at line 73
+    Found 52-bit comparator greater for signal <GND_172_o_MB[51]_LessThan_31_o> created at line 75
+    Summary:
+	inferred  64 Latch(s).
+	inferred   6 Comparator(s).
+	inferred 328 Multiplexer(s).
+Unit <n_case> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 11-bit adder                                          : 1
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 1
+ 52-bit adder                                          : 1
+ 57-bit adder                                          : 1
+# Latches                                              : 81
+ 1-bit latch                                           : 81
+# Comparators                                          : 17
+ 11-bit comparator equal                               : 1
+ 11-bit comparator greater                             : 10
+ 11-bit comparator lessequal                           : 1
+ 4-bit comparator lessequal                            : 1
+ 52-bit comparator greater                             : 2
+ 57-bit comparator lessequal                           : 2
+# Multiplexers                                         : 1524
+ 1-bit 2-to-1 multiplexer                              : 1377
+ 11-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 8
+ 52-bit 2-to-1 multiplexer                             : 1
+ 57-bit 2-to-1 multiplexer                             : 13
+ 6-bit 2-to-1 multiplexer                              : 1
+ 64-bit 2-to-1 multiplexer                             : 1
+ 69-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 112
+# Xors                                                 : 178
+ 1-bit xor2                                            : 177
+ 57-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <COMP1[0].SHIFTER5_0.SHIFTER5_0COMP> is unconnected in block <comp1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <COMP1[4].SHIFTER5_0.SHIFTER5_0COMP> is unconnected in block <comp1>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 11-bit adder                                          : 1
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 1
+ 52-bit adder                                          : 1
+ 57-bit adder                                          : 1
+# Comparators                                          : 17
+ 11-bit comparator equal                               : 1
+ 11-bit comparator greater                             : 10
+ 11-bit comparator lessequal                           : 1
+ 4-bit comparator lessequal                            : 1
+ 52-bit comparator greater                             : 2
+ 57-bit comparator lessequal                           : 2
+# Multiplexers                                         : 1523
+ 1-bit 2-to-1 multiplexer                              : 1376
+ 11-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 8
+ 52-bit 2-to-1 multiplexer                             : 1
+ 57-bit 2-to-1 multiplexer                             : 13
+ 6-bit 2-to-1 multiplexer                              : 1
+ 64-bit 2-to-1 multiplexer                             : 1
+ 69-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 112
+# Xors                                                 : 178
+ 1-bit xor2                                            : 177
+ 57-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <fpadder> ...
+
+Optimizing unit <preadder> ...
+
+Optimizing unit <Comp_Exp> ...
+
+Optimizing unit <Shift> ...
+
+Optimizing unit <shift_left> ...
+
+Optimizing unit <n_case> ...
+
+Optimizing unit <block_adder> ...
+
+Optimizing unit <signout> ...
+
+Optimizing unit <adder> ...
+
+Optimizing unit <block_norm> ...
+WARNING:Xst:1294 - Latch <Shift_3> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_4> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_0> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_2> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_1> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_5> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_8> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_10> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_9> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_5> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_7> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_6> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_2> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_4> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_3> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_1> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_0> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_3> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_4> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_0> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_2> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_1> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <Shift_5> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_8> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_10> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_9> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_5> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_7> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_6> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_2> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_4> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_3> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_1> is equivalent to a wire in block <block_norm>.
+WARNING:Xst:1294 - Latch <E_0> is equivalent to a wire in block <block_norm>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fpadder, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fpadder.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2153
+#      GND                         : 1
+#      LUT2                        : 24
+#      LUT3                        : 77
+#      LUT4                        : 245
+#      LUT5                        : 451
+#      LUT6                        : 1008
+#      MUXCY                       : 221
+#      MUXF7                       : 5
+#      VCC                         : 1
+#      XORCY                       : 120
+# FlipFlops/Latches                : 64
+#      LDC                         : 51
+#      LDP                         : 13
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 193
+#      IBUF                        : 129
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx75fgg676-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              64  out of  93296     0%  
+ Number of Slice LUTs:                 1805  out of  46648     3%  
+    Number used as Logic:              1805  out of  46648     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1805
+   Number with an unused Flip Flop:    1741  out of   1805    96%  
+   Number with an unused LUT:             0  out of   1805     0%  
+   Number of fully used LUT-FF pairs:    64  out of   1805     3%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         193
+ Number of bonded IOBs:                 193  out of    408    47%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                      | Clock buffer(FF name)  | Load  |
+------------------------------------------------------------------+------------------------+-------+
+comp4/outA[2]_outA[2]_OR_1645_o(comp4/outA[2]_outA[2]_OR_1645_o:O)| BUFG(*)(comp4/MS_1)    | 64    |
+------------------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 15.843ns
+   Maximum output required time after clock: 5.421ns
+   Maximum combinational path delay: 126.055ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'comp4/outA[2]_outA[2]_OR_1645_o'
+  Total number of paths / destination ports: 374520 / 128
+-------------------------------------------------------------------------
+Offset:              15.843ns (Levels of Logic = 8)
+  Source:            NumberB<57> (PAD)
+  Destination:       comp4/MS_1 (LATCH)
+  Destination Clock: comp4/outA[2]_outA[2]_OR_1645_o falling
+
+  Data Path: NumberB<57> to comp4/MS_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.328   1.365  NumberB_57_IBUF (NumberB_57_IBUF)
+     LUT6:I0->O            2   0.254   0.726  comp0/comp6/Mmux_e_data211_SW0 (N29)
+     LUT6:I5->O           87   0.254   2.336  comp4/GND_172_o_EB[10]_LessThan_25_o1 (comp0/NB_out_select<56>)
+     LUT5:I2->O           12   0.235   1.524  comp4/Mmux_outB11 (comp4/outB<0>)
+     LUT6:I0->O           83   0.254   2.532  comp4/enable1 (enable_aux)
+     LUT6:I0->O           67   0.254   2.408  comp4/outA[2]_PWR_30_o_equal_52_o<2> (comp4/outA[2]_PWR_30_o_equal_52_o)
+     LUT6:I0->O           51   0.254   1.829  comp4/Mmux_MS[51]_MA[10]_MUX_842_o111 (comp4/Mmux_MS[51]_MA[10]_MUX_842_o11)
+     LUT5:I4->O            1   0.254   0.000  comp4/Mmux_MS[51]_MA[9]_MUX_849_o11 (comp4/MS[51]_MA[9]_MUX_849_o)
+     LDC:D                     0.036          comp4/MS_9
+    ----------------------------------------
+    Total                     15.843ns (3.123ns logic, 12.720ns route)
+                                       (19.7% logic, 80.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'comp4/outA[2]_outA[2]_OR_1645_o'
+  Total number of paths / destination ports: 65 / 64
+-------------------------------------------------------------------------
+Offset:              5.421ns (Levels of Logic = 3)
+  Source:            comp4/ES_8 (LATCH)
+  Destination:       result<60> (PAD)
+  Source Clock:      comp4/outA[2]_outA[2]_OR_1645_o falling
+
+  Data Path: comp4/ES_8 to result<60>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q              2   0.581   0.834  comp4/ES_8 (comp4/ES_8)
+     LUT2:I0->O            1   0.250   0.000  comp3/Mmux_result57_F (N317)
+     MUXF7:I0->O           1   0.163   0.681  comp3/Mmux_result57 (result_60_OBUF)
+     OBUF:I->O                 2.912          result_60_OBUF (result<60>)
+    ----------------------------------------
+    Total                      5.421ns (3.906ns logic, 1.515ns route)
+                                       (72.1% logic, 27.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8003699455050208247808 / 64
+-------------------------------------------------------------------------
+Delay:               126.055ns (Levels of Logic = 103)
+  Source:            NumberA<57> (PAD)
+  Destination:       result<61> (PAD)
+
+  Data Path: NumberA<57> to result<61>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.328   1.365  NumberA_57_IBUF (NumberA_57_IBUF)
+     LUT6:I0->O            2   0.254   0.726  comp0/comp6/Mmux_e_data212_SW0 (N27)
+     LUT6:I5->O          218   0.254   2.649  comp0/comp6/Mmux_e_data212 (comp0/comp6/Mmux_e_data212)
+     LUT3:I0->O            5   0.235   1.296  comp0/comp4/comp2/Mmux_NB501 (comp0/comp4/numberB_aux<54>)
+     LUT6:I0->O            7   0.254   1.138  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_2_o111 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_2_o111)
+     LUT6:I3->O           13   0.235   1.553  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_2_o11 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_2_o11)
+     LUT6:I0->O            6   0.254   1.331  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_2_o14 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_2_o1)
+     LUT6:I0->O            8   0.254   0.944  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o1111 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o111)
+     LUT5:I4->O            6   0.254   1.104  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o112 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_19_o1)
+     LUT6:I3->O           10   0.235   1.008  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o1 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o1)
+     LUT4:I3->O            1   0.254   0.682  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o2_SW0 (N25)
+     LUT6:I5->O            7   0.254   1.365  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o2 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o2)
+     LUT6:I0->O            1   0.254   1.137  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o32 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o3)
+     LUT6:I0->O            5   0.254   1.296  comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o41 (comp0/comp4/comp0/T[56]_zero_vector[56]_equal_3_o4)
+     LUT6:I0->O           56   0.254   2.298  comp0/comp4/comp0/Mmux_aux212 (comp0/mixBaux<58>)
+     LUT6:I1->O            3   0.254   0.874  comp0/comp4/comp1/shft<1>221 (comp0/comp4/comp1/shft<1>_mmx_out5)
+     LUT3:I1->O            2   0.250   0.726  comp0/comp4/comp1/shft<2>61 (comp0/comp4/comp1/shft<2>_mmx_out14)
+     LUT6:I5->O            1   0.254   1.137  comp0/comp1/Mmux_NB373 (comp0/comp1/Mmux_NB372)
+     LUT6:I0->O            1   0.254   0.790  comp0/comp1/Mmux_NB374_SW0 (N301)
+     LUT6:I4->O            4   0.250   1.080  comp0/comp1/Mmux_NB374 (comp0/Bmux<42>)
+     LUT4:I0->O            1   0.254   0.000  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_lut<21> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_lut<21>)
+     MUXCY:S->O            1   0.215   0.000  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<21> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<22> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<23> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<24> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<25> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<26> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<26>)
+     MUXCY:CI->O           1   0.235   0.958  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<27> (comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<27>)
+     LUT4:I0->O           56   0.254   2.298  comp0/comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<28> (comp0/comp0/COMP0/MB[56]_MA[56]_LessThan_7_o)
+     LUT6:I1->O           10   0.254   1.463  comp0/comp0/COMP0/C_MB[0]_AND_1_o1 (comp0/comp0/COMP0/C_MB[0]_AND_1_o)
+     LUT6:I0->O            0   0.254   0.000  comp0/comp0/COMP0/Mmux_dif_A12 (comp0/comp0/COMP0/Mmux_dif_rs_A<0>)
+     MUXCY:DI->O           1   0.181   0.000  comp0/comp0/COMP0/Mmux_dif_rs_cy<0> (comp0/comp0/COMP0/Mmux_dif_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mmux_dif_rs_cy<1> (comp0/comp0/COMP0/Mmux_dif_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mmux_dif_rs_cy<2> (comp0/comp0/COMP0/Mmux_dif_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mmux_dif_rs_cy<3> (comp0/comp0/COMP0/Mmux_dif_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/comp0/COMP0/Mmux_dif_rs_cy<4> (comp0/comp0/COMP0/Mmux_dif_rs_cy<4>)
+     XORCY:CI->O          45   0.206   2.192  comp0/comp0/COMP0/Mmux_dif_rs_xor<5> (comp0/comp0/COMP0/dif<5>)
+     LUT6:I0->O            1   0.254   0.682  comp0/comp0/COMP0/dif[10]_GND_8_o_LessThan_17_o1_SW0 (N211)
+     LUT6:I5->O           76   0.254   2.131  comp0/comp0/COMP0/dif[10]_GND_8_o_LessThan_17_o1 (comp0/comp0/COMP0/dif[10]_GND_8_o_LessThan_17_o)
+     LUT2:I0->O           48   0.250   2.218  comp0/comp0/COMP0/Mmux_Dexp21 (comp0/comp0/Dexp_aux<1>)
+     LUT6:I1->O            4   0.254   1.080  comp0/comp0/COMP1/SHFT<1>191 (comp0/comp0/COMP1/SHFT<1>_mmx_out26)
+     LUT6:I2->O            4   0.254   1.080  comp0/comp0/COMP1/SHFT<3>151 (comp0/comp0/COMP1/SHFT<3>_mmx_out4)
+     LUT4:I0->O            2   0.254   0.726  comp0/comp3/Mmux_B13 (comp0/comp3/Mmux_B19)
+     LUT6:I5->O            4   0.254   1.234  comp0/comp3/Mmux_B14 (MB_aux<0>)
+     LUT5:I0->O            4   0.254   0.912  comp1/component00/Mmux_Aa1101 (comp1/Bb_aux<0>)
+     LUT5:I3->O            5   0.250   1.069  comp1/component01/Comp1[1].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<1>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[3].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<3>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[5].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<5>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[7].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<7>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[9].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<9>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[11].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<11>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[13].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<13>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[15].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<15>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[17].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<17>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[19].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<19>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[21].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<21>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[23].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<23>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[25].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<25>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[27].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<27>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[29].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<29>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[31].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<31>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[33].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<33>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[35].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<35>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[37].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<37>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[39].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<39>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[41].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<41>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[43].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<43>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[45].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<45>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[47].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<47>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[49].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<49>)
+     LUT6:I3->O            6   0.235   1.104  comp1/component01/Comp1[51].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<51>)
+     LUT6:I3->O            5   0.235   1.069  comp1/component01/Comp1[53].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<53>)
+     LUT6:I3->O            3   0.235   0.874  comp1/component01/Comp1[55].sumador_i.sumador_icomp/Cout1 (comp1/component01/aux<55>)
+     LUT6:I4->O            0   0.250   0.000  comp1/Mxor_n0016_56_xo<0>1 (comp1/n0016<56>)
+     XORCY:LI->O           1   0.149   0.682  comp1/Madd_S_aux[56]_GND_146_o_add_1_OUT_xor<56> (comp1/S_aux[56]_GND_146_o_add_1_OUT<56>)
+     LUT6:I5->O            5   0.254   0.841  comp1/Mmux_S521 (MOut_aux<56>)
+     LUT6:I5->O            2   0.254   1.156  comp2/comp0/comp0/T[56]_zero_vector[56]_equal_2_o121 (comp2/comp0/comp0/T[56]_zero_vector[56]_equal_2_o12)
+     LUT6:I1->O           13   0.254   1.553  comp2/comp0/comp0/T[56]_zero_vector[56]_equal_2_o141 (comp2/comp0/comp0/T[56]_zero_vector[56]_equal_2_o14)
+     LUT6:I0->O            1   0.254   0.958  comp2/comp0/comp0/Mmux_aux118 (comp2/comp0/comp0/Mmux_aux117)
+     LUT6:I2->O            1   0.254   0.958  comp2/comp0/comp0/Mmux_aux119_SW0 (N309)
+     LUT4:I0->O            1   0.254   0.790  comp2/comp0/comp0/Mmux_aux119 (comp2/comp0/comp0/Mmux_aux118)
+     LUT5:I3->O            1   0.250   0.682  comp2/comp0/comp0/Mmux_aux120_SW0 (N273)
+     LUT4:I3->O            1   0.254   0.958  comp2/comp0/comp0/Mmux_aux120 (comp2/comp0/comp0/Mmux_aux119)
+     LUT6:I2->O            1   0.254   0.682  comp2/comp0/comp0/Mmux_aux122 (comp2/comp0/comp0/Mmux_aux121)
+     LUT6:I5->O            1   0.254   0.682  comp2/comp0/comp0/Mmux_aux123_SW0 (N275)
+     LUT6:I5->O            1   0.254   0.958  comp2/comp0/comp0/Mmux_aux123 (comp2/comp0/comp0/Mmux_aux122)
+     LUT6:I2->O            1   0.254   0.958  comp2/comp0/comp0/Mmux_aux124 (comp2/comp0/comp0/Mmux_aux123)
+     LUT6:I2->O            1   0.254   1.112  comp2/comp0/comp0/Mmux_aux125 (comp2/comp0/comp0/Mmux_aux124)
+     LUT6:I1->O            1   0.254   0.910  comp2/comp0/comp0/Mmux_aux126 (comp2/comp0/comp0/Mmux_aux125)
+     LUT6:I3->O            9   0.235   0.976  comp2/comp0/comp0/Mmux_aux127 (comp2/comp0/Zcount_aux<0>)
+     LUT6:I5->O            1   0.254   0.910  comp2/comp0/GND_151_o_ES[10]_LessThan_1_o26_SW0 (N283)
+     LUT6:I3->O            1   0.235   0.910  comp2/comp0/GND_151_o_ES[10]_LessThan_1_o26 (comp2/comp0/GND_151_o_ES[10]_LessThan_1_o25)
+     LUT3:I0->O            1   0.235   0.958  comp2/comp0/GND_151_o_ES[10]_LessThan_1_o27_SW0 (N285)
+     LUT6:I2->O           34   0.254   1.781  comp2/comp0/GND_151_o_ES[10]_LessThan_1_o27 (comp2/comp0/GND_151_o_ES[10]_LessThan_1_o)
+     LUT4:I1->O           60   0.235   2.127  comp2/comp0/Mmux_Shift[5]_Zcount_aux[0]_MUX_306_o11 (comp2/comp0/Shift<0>)
+     LUT5:I2->O            2   0.235   1.002  comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>21 (comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>1)
+     LUT5:I1->O            2   0.254   1.002  comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>31 (comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>2)
+     LUT5:I1->O            2   0.254   1.002  comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>41 (comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>3)
+     LUT5:I1->O            3   0.254   1.042  comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>51 (comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>4)
+     LUT6:I2->O            4   0.254   0.804  comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>71 (comp2/comp0/Madd_GND_151_o_GND_151_o_add_2_OUT_cy<0>6)
+     LUT5:I4->O            1   0.254   0.910  comp3/Mmux_result581 (comp3/Mmux_result58)
+     LUT4:I1->O            1   0.235   0.681  comp3/Mmux_result582 (result_61_OBUF)
+     OBUF:I->O                 2.912          result_61_OBUF (result<61>)
+    ----------------------------------------
+    Total                    126.055ns (26.826ns logic, 99.229ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.70 secs
+ 
+--> 
+
+
+Total memory usage is 403756 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  129 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

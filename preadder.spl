@@ -1,0 +1,12 @@
+[Inputs]
+enable
+=numberA[63:0]=
+=numberB[63:0]=
+[Outputs]
+SA
+SB
+C
+=Eout[10:0]=
+=MAOut[56:0]=
+=MBOut[56:0]=
+[BiDir]

@@ -1,0 +1,65 @@
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+xst -intstyle ise -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -ifn "/home/dborquez/XilinxProjects/RK4/preadder.xst" -ofn "/home/dborquez/XilinxProjects/RK4/preadder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-2 preadder.ngc preadder.ngd  
+map -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -intstyle ise -p xc6slx75-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o preadder_map.ncd preadder.ngd preadder.pcf 
+par -filter "/home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off preadder_map.ncd preadder.ncd preadder.pcf 
+trce -filter /home/dborquez/XilinxProjects/RK4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml preadder.twx preadder.ncd -o preadder.twr preadder.pcf 
+vhdtdtfi -lib work Mux.vhd -lib work Zero.vhd -lib work shift_left.vhd -lib work Shift.vhd -lib work Comp_Exp.vhd -lib work Comp.vhd -lib work Select.vhd -lib work n_subn.vhd -lib work n_normal.vhd -lib work norm.vhd -lib work mux_ns.vhd -lib work mux_adder.vhd -lib work demux.vhd -lib work preadder.vhd -prj RK4 -o preadder.spl -module preadder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work Mux.vhd -lib work Zero.vhd -lib work shift_left.vhd -lib work Shift.vhd -lib work Comp_Exp.vhd -lib work Comp.vhd -lib work Select.vhd -lib work n_subn.vhd -lib work n_normal.vhd -lib work norm.vhd -lib work mux_ns.vhd -lib work mux_adder.vhd -lib work demux.vhd -lib work preadder.vhd -prj RK4 -o preadder.spl -module preadder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 preadder.spl /home/dborquez/XilinxProjects/RK4/preadder.sym 

@@ -1,0 +1,539 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: preadder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "preadder.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "preadder"
+Output Format                      : NGC
+Target Device                      : xc6slx75-2-fgg676
+
+---- Source Options
+Top Module Name                    : preadder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Mux.vhd" into library work
+Parsing entity <Mux>.
+Parsing architecture <Behavioral> of entity <mux>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Zero.vhd" into library work
+Parsing entity <Zero>.
+Parsing architecture <Behavioral> of entity <zero>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/shift_left.vhd" into library work
+Parsing entity <shift_left>.
+Parsing architecture <Behavioral> of entity <shift_left>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Shift.vhd" into library work
+Parsing entity <Shift>.
+Parsing architecture <Behavioral> of entity <shift>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Comp_Exp.vhd" into library work
+Parsing entity <Comp_Exp>.
+Parsing architecture <Behavioral> of entity <comp_exp>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Comp.vhd" into library work
+Parsing entity <Comp>.
+Parsing architecture <Behavioral> of entity <comp>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/Select.vhd" into library work
+Parsing entity <selector>.
+Parsing architecture <Behavioral> of entity <selector>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/n_subn.vhd" into library work
+Parsing entity <n_subn>.
+Parsing architecture <Behavioral> of entity <n_subn>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/n_normal.vhd" into library work
+Parsing entity <n_normal>.
+Parsing architecture <Behavioral> of entity <n_normal>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/norm.vhd" into library work
+Parsing entity <norm>.
+Parsing architecture <Behavioral> of entity <norm>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/mux_ns.vhd" into library work
+Parsing entity <mux_ns>.
+Parsing architecture <Behavioral> of entity <mux_ns>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/mux_adder.vhd" into library work
+Parsing entity <mux_adder>.
+Parsing architecture <Behavioral> of entity <mux_adder>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/demux.vhd" into library work
+Parsing entity <demux>.
+Parsing architecture <Behavioral> of entity <demux>.
+Parsing VHDL file "/home/dborquez/XilinxProjects/RK4/preadder.vhd" into library work
+Parsing entity <preadder>.
+Parsing architecture <Behavioral> of entity <preadder>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <preadder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <n_normal> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Comp_Exp> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Shift> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux_ns> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <demux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux_adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <norm> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Zero> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shift_left> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Comp> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <n_subn> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <selector> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <preadder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/preadder.vhd".
+    Summary:
+	no macro.
+Unit <preadder> synthesized.
+
+Synthesizing Unit <n_normal>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/n_normal.vhd".
+    Summary:
+	no macro.
+Unit <n_normal> synthesized.
+
+Synthesizing Unit <Comp_Exp>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Comp_Exp.vhd".
+    Found 11-bit adder for signal <X_7_o_EA[10]_mux_11_OUT> created at line 69.
+    Found 11-bit subtractor for signal <GND_7_o_GND_7_o_sub_13_OUT<10:0>> created at line 68.
+    Found 11-bit subtractor for signal <GND_7_o_GND_7_o_sub_15_OUT<10:0>> created at line 67.
+    Found 11-bit comparator greater for signal <EB[10]_EA[10]_LessThan_5_o> created at line 55
+    Found 11-bit comparator greater for signal <EA[10]_EB[10]_LessThan_6_o> created at line 56
+    Found 57-bit comparator lessequal for signal <n0009> created at line 57
+    Found 11-bit comparator lessequal for signal <n0026> created at line 73
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <Comp_Exp> synthesized.
+
+Synthesizing Unit <Shift>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Shift.vhd".
+    Summary:
+	no macro.
+Unit <Shift> synthesized.
+
+Synthesizing Unit <Mux>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Mux.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux> synthesized.
+
+Synthesizing Unit <mux_ns>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/mux_ns.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <mux_ns> synthesized.
+
+Synthesizing Unit <demux>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/demux.vhd".
+    Summary:
+	no macro.
+Unit <demux> synthesized.
+
+Synthesizing Unit <mux_adder>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/mux_adder.vhd".
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <mux_adder> synthesized.
+
+Synthesizing Unit <norm>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/norm.vhd".
+    Summary:
+	no macro.
+Unit <norm> synthesized.
+
+Synthesizing Unit <Zero>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Zero.vhd".
+    Summary:
+	inferred  56 Multiplexer(s).
+Unit <Zero> synthesized.
+
+Synthesizing Unit <shift_left>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/shift_left.vhd".
+    Summary:
+	no macro.
+Unit <shift_left> synthesized.
+
+Synthesizing Unit <Comp>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Comp.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <Comp> synthesized.
+
+Synthesizing Unit <n_subn>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/n_subn.vhd".
+WARNING:Xst:647 - Input <numberB<67:57>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 57-bit comparator lessequal for signal <C_INV_76_o> created at line 50
+    Summary:
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <n_subn> synthesized.
+
+Synthesizing Unit <selector>.
+    Related source file is "/home/dborquez/XilinxProjects/RK4/Select.vhd".
+    Found 11-bit comparator greater for signal <GND_144_o_EA[10]_LessThan_17_o> created at line 83
+    Found 11-bit comparator greater for signal <GND_144_o_EB[10]_LessThan_18_o> created at line 83
+    Summary:
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <selector> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 11-bit addsub                                         : 1
+# Comparators                                          : 7
+ 11-bit comparator greater                             : 4
+ 11-bit comparator lessequal                           : 1
+ 57-bit comparator lessequal                           : 2
+# Multiplexers                                         : 764
+ 1-bit 2-to-1 multiplexer                              : 690
+ 11-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 1
+ 57-bit 2-to-1 multiplexer                             : 6
+ 6-bit 2-to-1 multiplexer                              : 1
+ 69-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 56
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <COMP1[0].SHIFTER5_0.SHIFTER5_0COMP> is unconnected in block <comp1>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 11-bit addsub                                         : 1
+# Comparators                                          : 7
+ 11-bit comparator greater                             : 4
+ 11-bit comparator lessequal                           : 1
+ 57-bit comparator lessequal                           : 2
+# Multiplexers                                         : 764
+ 1-bit 2-to-1 multiplexer                              : 690
+ 11-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 1
+ 57-bit 2-to-1 multiplexer                             : 6
+ 6-bit 2-to-1 multiplexer                              : 1
+ 69-bit 2-to-1 multiplexer                             : 6
+ 8-bit 2-to-1 multiplexer                              : 56
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <preadder> ...
+
+Optimizing unit <Comp_Exp> ...
+
+Optimizing unit <Shift> ...
+
+Optimizing unit <shift_left> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block preadder, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : preadder.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1072
+#      GND                         : 1
+#      LUT2                        : 9
+#      LUT3                        : 68
+#      LUT4                        : 153
+#      LUT5                        : 302
+#      LUT6                        : 448
+#      MUXCY                       : 74
+#      MUXF7                       : 5
+#      VCC                         : 1
+#      XORCY                       : 11
+# IO Buffers                       : 257
+#      IBUF                        : 129
+#      OBUF                        : 128
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx75fgg676-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  980  out of  46648     2%  
+    Number used as Logic:               980  out of  46648     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    980
+   Number with an unused Flip Flop:     980  out of    980   100%  
+   Number with an unused LUT:             0  out of    980     0%  
+   Number of fully used LUT-FF pairs:     0  out of    980     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                         257
+ Number of bonded IOBs:                 257  out of    408    62%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 55.556ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 939356574181 / 124
+-------------------------------------------------------------------------
+Delay:               55.556ns (Levels of Logic = 47)
+  Source:            numberA<57> (PAD)
+  Destination:       MBOut<7> (PAD)
+
+  Data Path: numberA<57> to MBOut<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   1.296  numberA_57_IBUF (numberA_57_IBUF)
+     LUT6:I0->O            2   0.254   0.726  comp6/Mmux_e_data212_SW0 (N184)
+     LUT6:I5->O          226   0.254   2.652  comp6/Mmux_e_data212 (comp6/Mmux_e_data212)
+     LUT3:I0->O            5   0.235   1.296  comp4/comp2/Mmux_NB501 (comp4/numberB_aux<54>)
+     LUT6:I0->O            7   0.254   0.910  comp4/comp0/T[56]_zero_vector[56]_equal_2_o111 (comp4/comp0/T[56]_zero_vector[56]_equal_2_o111)
+     LUT6:I5->O            1   0.254   0.682  comp4/comp0/T[56]_zero_vector[56]_equal_2_o11_SW0 (N194)
+     LUT6:I5->O           15   0.254   1.610  comp4/comp0/T[56]_zero_vector[56]_equal_2_o11 (comp4/comp0/T[56]_zero_vector[56]_equal_2_o11)
+     LUT6:I0->O            6   0.254   1.331  comp4/comp0/T[56]_zero_vector[56]_equal_2_o12 (comp4/comp0/T[56]_zero_vector[56]_equal_2_o1)
+     LUT6:I0->O            6   0.254   1.306  comp4/comp0/T[56]_zero_vector[56]_equal_3_o1111 (comp4/comp0/T[56]_zero_vector[56]_equal_3_o111)
+     LUT5:I0->O           12   0.254   1.297  comp4/comp0/T[56]_zero_vector[56]_equal_3_o111 (comp4/comp0/T[56]_zero_vector[56]_equal_19_o1)
+     LUT6:I3->O           10   0.235   1.236  comp4/comp0/T[56]_zero_vector[56]_equal_3_o1 (comp4/comp0/T[56]_zero_vector[56]_equal_3_o1)
+     LUT6:I3->O            5   0.235   1.296  comp4/comp0/T[56]_zero_vector[56]_equal_3_o2 (comp4/comp0/T[56]_zero_vector[56]_equal_3_o2)
+     LUT6:I0->O            2   0.254   1.002  comp4/comp0/T[56]_zero_vector[56]_equal_3_o311 (comp4/comp0/T[56]_zero_vector[56]_equal_3_o31)
+     LUT4:I0->O           10   0.254   1.463  comp4/comp0/T[56]_zero_vector[56]_equal_3_o31 (comp4/comp0/T[56]_zero_vector[56]_equal_3_o3)
+     LUT6:I0->O            7   0.254   1.340  comp4/comp0/T[56]_zero_vector[56]_equal_3_o41 (comp4/comp0/T[56]_zero_vector[56]_equal_3_o4)
+     LUT6:I1->O           56   0.254   2.323  comp4/comp0/Mmux_aux117 (mixBaux<57>)
+     LUT6:I0->O            3   0.254   0.874  comp4/comp1/shft<1>212 (comp4/comp1/shft<1>_mmx_out4)
+     LUT3:I1->O            2   0.250   0.726  comp4/comp1/shft<2>61 (comp4/comp1/shft<2>_mmx_out14)
+     LUT6:I5->O            1   0.254   1.137  comp1/Mmux_NB373 (comp1/Mmux_NB372)
+     LUT6:I0->O            1   0.254   0.790  comp1/Mmux_NB374_SW0 (N222)
+     LUT6:I4->O            4   0.250   1.080  comp1/Mmux_NB374 (Bmux<42>)
+     LUT4:I0->O            1   0.254   0.000  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_lut<21> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_lut<21>)
+     MUXCY:S->O            1   0.215   0.000  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<21> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<22> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<23> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<24> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<25> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<26> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<26>)
+     MUXCY:CI->O           1   0.235   0.958  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<27> (comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<27>)
+     LUT4:I0->O           55   0.254   2.088  comp0/COMP0/Mcompar_MB[56]_MA[56]_LessThan_7_o_cy<28> (comp0/COMP0/MB[56]_MA[56]_LessThan_7_o)
+     LUT6:I3->O           10   0.235   1.463  comp0/COMP0/C_MB[0]_AND_1_o1 (comp0/COMP0/C_MB[0]_AND_1_o)
+     LUT6:I0->O            0   0.254   0.000  comp0/COMP0/Mmux_dif_A12 (comp0/COMP0/Mmux_dif_rs_A<0>)
+     MUXCY:DI->O           1   0.181   0.000  comp0/COMP0/Mmux_dif_rs_cy<0> (comp0/COMP0/Mmux_dif_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mmux_dif_rs_cy<1> (comp0/COMP0/Mmux_dif_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mmux_dif_rs_cy<2> (comp0/COMP0/Mmux_dif_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mmux_dif_rs_cy<3> (comp0/COMP0/Mmux_dif_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  comp0/COMP0/Mmux_dif_rs_cy<4> (comp0/COMP0/Mmux_dif_rs_cy<4>)
+     XORCY:CI->O          45   0.206   2.192  comp0/COMP0/Mmux_dif_rs_xor<5> (comp0/COMP0/dif<5>)
+     LUT6:I0->O            1   0.254   0.682  comp0/COMP0/dif[10]_GND_7_o_LessThan_17_o1_SW0 (N198)
+     LUT6:I5->O           76   0.254   2.131  comp0/COMP0/dif[10]_GND_7_o_LessThan_17_o1 (comp0/COMP0/dif[10]_GND_7_o_LessThan_17_o)
+     LUT2:I0->O           48   0.250   2.218  comp0/COMP0/Mmux_Dexp21 (comp0/Dexp_aux<1>)
+     LUT6:I1->O            3   0.254   1.042  comp0/COMP1/SHFT<1>72 (comp0/COMP1/SHFT<1>_mmx_out15)
+     LUT4:I0->O            2   0.254   0.726  comp0/COMP1/SHFT<2>21 (comp0/COMP1/SHFT<2>_mmx_out10)
+     LUT6:I5->O            1   0.254   0.910  comp3/Mmux_B454 (comp3/Mmux_B453)
+     LUT5:I2->O            1   0.235   0.790  comp3/Mmux_B455_SW0 (N226)
+     LUT6:I4->O            1   0.250   0.681  comp3/Mmux_B455 (MBOut_4_OBUF)
+     OBUF:I->O                 2.912          MBOut_4_OBUF (MBOut<4>)
+    ----------------------------------------
+    Total                     55.556ns (13.304ns logic, 42.253ns route)
+                                       (23.9% logic, 76.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.00 secs
+ 
+--> 
+
+
+Total memory usage is 395276 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

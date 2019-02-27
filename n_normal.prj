@@ -1,0 +1,4 @@
+vhdl work "Mux.vhd"
+vhdl work "Shift.vhd"
+vhdl work "Comp_Exp.vhd"
+vhdl work "n_normal.vhd"
